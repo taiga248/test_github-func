@@ -19,7 +19,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
-      - name: Run Prettier
+      - name: Run fmt_build_greet
         run: |
           npm install
           npx prettier --write ${TARGET_FILE}
@@ -27,5 +27,5 @@ jobs:
           npm run greet
       - uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
-          commit_message: Apply Prettier Change
+          commit_message: Apply GitHub actions.
           ref: ${{ github.head_ref }}
