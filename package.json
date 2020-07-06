@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "fmt": "npx prettier --write index.js"
+    "fmt": "npx prettier --write src/index.js",
+    "build": "webpack",
+    "greet": "node docs/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,8 @@
   },
   "homepage": "https://github.com/taiga248/test_github-func#readme",
   "devDependencies": {
-    "prettier": "^2.0.5"
+    "prettier": "^2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
   }
 }
