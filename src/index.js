@@ -3,3 +3,4 @@ const greet = msg => {
 };
 
 greet("Hello");
+greet("アニョハセヨ");
