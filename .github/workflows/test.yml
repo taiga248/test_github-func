@@ -1,4 +1,4 @@
-name: Prettier
+name: test
 
 on:
   push:
@@ -7,10 +7,10 @@ on:
     branches: [master]
 
 env:
-  FILE_PATTERN: "index.js"
+  TARGET_FILE: "src/index.js"
 
 jobs:
-  lint:
+  fmt_build_greet:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -22,7 +22,9 @@ jobs:
       - name: Run Prettier
         run: |
           npm install
-          npx prettier --write ${FILE_PATTERN}
+          npx prettier --write ${TARGET_FILE}
+          npm run build
+          npm run greet
       - uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
           commit_message: Apply Prettier Change
