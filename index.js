@@ -1,5 +1,5 @@
-const greet = (msg) => {
-  console.log(msg);
+const greet = msg => {
+  console.log(  msg  );
 };
 
-greet("Hello");
+greet("Hello"  );
