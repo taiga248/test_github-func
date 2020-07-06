@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "lint": "eslint --fix index.js"
+    "fmt": "npx prettier --write index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
     "url": "https://github.com/taiga248/test_github-func/issues"
   },
   "homepage": "https://github.com/taiga248/test_github-func#readme",
-  "dependencies": {
-    "eslint": "^7.4.0"
+  "devDependencies": {
+    "prettier": "^2.0.5"
   }
 }
