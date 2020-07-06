@@ -1,10 +1,13 @@
 name: Prettier
 
 on:
+  push:
+    branches: [master]
   pull_request:
+    branches: [master]
 
 env:
-  FILE_PATTERN: "{src,__tests__}/**/*.{ts,tsx,js,jsx}"
+  FILE_PATTERN: "index.js"
 
 jobs:
   lint:
@@ -18,8 +21,8 @@ jobs:
           node-version: 12.x
       - name: Run Prettier
         run: |
-          yarn install
-          yarn prettier --write ${FILE_PATTERN}
+          npm install
+          npx prettier --write ${FILE_PATTERN}
       - uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
           commit_message: Apply Prettier Change
